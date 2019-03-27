@@ -80,6 +80,75 @@ function getOwnerCategoryText(code) {
 	}
 }
 
+// Return the text for owner category
+function getOriginalStatusText(code) {
+	switch (code) {
+		case 'A':
+			return "A - Newly Import Vehicle";
+			break;
+		case 'B':
+			return "B - Used Import Vehicle";
+			break;
+		case 'C':
+			return "C - Assembled Locally";
+			break;
+		case 'D':
+			return "D - Built Locally";
+			break;
+		case 'E':
+			return "E - Built & Assembled Locally";
+			break;
+		case 'F':
+			return "F - Assembled Locally Using Used Imported Component";
+			break;
+		case 'G':
+			return "G - Reconstructed";
+			break;
+		default:
+			return "A - Newly Import Vehicle";
+			break;
+	}
+}
+
+// Return the text for owner category
+function getFuelTypeText(code) {
+	switch (code) {
+		case '0':
+			return "0 - Petrol";
+			break;
+		case '1':
+			return "1 - Diesel";
+			break;
+		case '2':
+			return "2 - Liquefied Petroleum Gas";
+			break;
+		case '3':
+			return "3 - Petrol & Liquefied Petroleum Gas";
+			break;
+		case '4':
+			return "4 - Natural Gas for Vehicle (NGV)";
+			break;
+		case '5':
+			return "5 - Petrol & Natural Gas for Vehicle (NGV)";
+			break;
+		case '6':
+			return "6 - Diesel & Natural Gas for Vehicle (NGV)";
+			break;
+		case '7':
+			return "7 - Green Diesel";
+			break;
+		case '8':
+			return "8 - Green Diesel & Natural Gas for Vehicle (NGV)";
+			break;
+		case '9':
+			return "9 - Others";
+			break;
+		default:
+			return "0 - Petrol";
+			break;
+	}
+}
+
 // Remove whitespace and "-"
 function removeWhitespaceAndDash(input) {
 	return input.replace(/-/g, '').replace(/ /g, '');

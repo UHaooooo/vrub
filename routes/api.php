@@ -21,3 +21,5 @@ Route::apiResource('citizens', 'CitizenController');
 
 //Route::apiResource('areas', 'AreaController');
 Route::get('areas/latest_number', 'AreaController@latestNumber');
+
+Route::apiResource('vehicles', 'VehicleController');

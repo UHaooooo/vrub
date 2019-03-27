@@ -115,9 +115,9 @@
 						</div>
 					</div>
 					<div class="form-group row">
-						<label for="vehicleCurbWeight" class="col-sm-3 col-form-label">Curb Weight (KG)</label>
+						<label for="vehicleKerbWeight" class="col-sm-3 col-form-label">Kerb Weight (KG)</label>
 						<div class="col-sm-9">
-							<input type="number" class="form-control-plaintext" id="vehicleCurbWeight" value="800" readonly>
+							<input type="number" class="form-control-plaintext" id="vehicleKerbWeight" value="800" readonly>
 						</div>
 					</div>
 				</div>

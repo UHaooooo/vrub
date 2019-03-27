@@ -6,7 +6,8 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Vehicle Registration Portal - Home</title>
 	<script src="/js/app.js"></script>
-	<script src="/js/custom.js"></script>
+	<script src="/js/smart_contract.js"></script>
+	<script src="/js/util.js"></script>
 	<style>
 		body{
 			margin: 0;

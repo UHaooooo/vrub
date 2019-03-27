@@ -90,81 +90,93 @@
 									</div>
 								</div>
 								<div class="form-group row">
-									<label for="oldVehicleEngineNo" class="col-sm-3 col-form-label">Engine No.</label>
+									<label for="confirmVehicleEngineNo" class="col-sm-3 col-form-label">Engine No.</label>
 									<div class="col-sm-9">
-										<input type="text" class="form-control-plaintext" id="oldVehicleEngineNo" value="52WVC10338" required readonly>
+										<input type="text" class="form-control-plaintext" id="confirmVehicleEngineNo" value="" required readonly>
 									</div>
 								</div>
 								<div class="form-group row">
-									<label for="oldVehicleChassisNo" class="col-sm-3 col-form-label">Chassis No.</label>
+									<label for="confirmVehicleChassisNo" class="col-sm-3 col-form-label">Chassis No.</label>
 									<div class="col-sm-9">
-										<input type="text" class="form-control-plaintext" id="oldVehicleChassisNo" value="2H2XA59BWDY987665" required readonly>
+										<input type="text" class="form-control-plaintext" id="confirmVehicleChassisNo" value="" required readonly>
 									</div>
 								</div>
 								<div class="form-group row">
-									<label for="oldVehicleProductionYear" class="col-sm-3 col-form-label">Production Year</label>
+									<label for="confirmVehicleProductionYear" class="col-sm-3 col-form-label">Production Year</label>
 									<div class="col-sm-9">
-										<input type="number" class="form-control-plaintext" id="oldVehicleProductionYear" value="2008" required readonly>
+										<input type="number" class="form-control-plaintext" id="confirmVehicleProductionYear" value="2008" required readonly>
 									</div>
 								</div>
 								<div class="form-group row">
-									<label for="oldVehicleOriginalStatus" class="col-sm-3 col-form-label">Original Status</label>
+									<label for="confirmVehicleOriginalStatus" class="col-sm-3 col-form-label">Original Status</label>
 									<div class="col-sm-9">
-										<input type="text" id="oldVehicleOriginalStatus" class="form-control-plaintext" value="A - Newly Import Vehicle" required readonly>
+										<input type="text" id="confirmVehicleOriginalStatus" class="form-control-plaintext" value="A - Newly Import Vehicle" required readonly>
 									</div>
 								</div>
 								<div class="form-group row">
-									<label for="oldVehicleEngineCapacity" class="col-sm-3 col-form-label">Engine Capacity</label>
+									<label for="confirmVehicleEngineCapacity" class="col-sm-3 col-form-label">Engine Capacity</label>
 									<div class="col-sm-9">
-										<input type="number" class="form-control-plaintext" id="oldVehicleEngineCapacity" value="2000" required readonly>
+										<input type="number" class="form-control-plaintext" id="confirmVehicleEngineCapacity" value="2000" required readonly>
 									</div>
 								</div>
 								<div class="form-group row">
-									<label for="oldVehicleFuelType" class="col-sm-3 col-form-label">Fuel Type</label>
+									<label for="confirmVehicleNumberOfSeat" class="col-sm-3 col-form-label">Number of Seat</label>
 									<div class="col-sm-9">
-										<input type="text" class="form-control-plaintext" id="oldVehicleFuelType" value="0 - Petrol" required readonly>
+										<input type="number" class="form-control-plaintext" id="confirmVehicleNumberOfSeat" value="" required readonly>
 									</div>
 								</div>
 								<div class="form-group row">
-									<label for="oldVehiclePurpose" class="col-sm-3 col-form-label">Purpose</label>
+									<label for="confirmVehicleColor" class="col-sm-3 col-form-label">Color</label>
 									<div class="col-sm-9">
-										<input type="text" class="form-control-plaintext" id="oldVehiclePurpose" value="Persendirian" required readonly>
+										<input type="text" class="form-control-plaintext" id="confirmVehicleColor" value="" required readonly>
 									</div>
 								</div>
 								<div class="form-group row">
-									<label for="oldVehicleBrand" class="col-sm-3 col-form-label">Brand</label>
+									<label for="confirmVehicleFuelType" class="col-sm-3 col-form-label">Fuel Type</label>
 									<div class="col-sm-9">
-										<input type="text" class="form-control-plaintext" id="oldVehicleBrand" value="Perodua" required readonly>
+										<input type="text" class="form-control-plaintext" id="confirmVehicleFuelType" value="0 - Petrol" required readonly>
 									</div>
 								</div>
 								<div class="form-group row">
-									<label for="oldVehicleModel" class="col-sm-3 col-form-label">Brand</label>
+									<label for="confirmVehiclePurpose" class="col-sm-3 col-form-label">Purpose</label>
 									<div class="col-sm-9">
-										<input type="text" class="form-control-plaintext" id="oldVehicleModel" value="Myvi" required readonly>
+										<input type="text" class="form-control-plaintext" id="confirmVehiclePurpose" value="Persendirian" required readonly>
 									</div>
 								</div>
 								<div class="form-group row">
-									<label for="oldVehicleType" class="col-sm-3 col-form-label">Vehicle Type</label>
+									<label for="confirmVehicleBrand" class="col-sm-3 col-form-label">Brand</label>
 									<div class="col-sm-9">
-										<input type="text" class="form-control-plaintext" id="oldVehicleType" value="Car" required readonly>
+										<input type="text" class="form-control-plaintext" id="confirmVehicleBrand" value="Perodua" required readonly>
 									</div>
 								</div>
 								<div class="form-group row">
-									<label for="oldVehicleLadenWeight" class="col-sm-3 col-form-label">Laden Weight (KG)</label>
+									<label for="confirmVehicleModel" class="col-sm-3 col-form-label">Brand</label>
 									<div class="col-sm-9">
-										<input type="number" class="form-control-plaintext" id="oldVehicleLadenWeight" value="950" required readonly>
+										<input type="text" class="form-control-plaintext" id="confirmVehicleModel" value="Myvi" required readonly>
 									</div>
 								</div>
 								<div class="form-group row">
-									<label for="oldVehicleUnladenWeight" class="col-sm-3 col-form-label">Unladen Weight (KG)</label>
+									<label for="confirmVehicleType" class="col-sm-3 col-form-label">Vehicle Type</label>
 									<div class="col-sm-9">
-										<input type="number" class="form-control-plaintext" id="oldVehicleUnladenWeight" value="900" required readonly>
+										<input type="text" class="form-control-plaintext" id="confirmVehicleType" value="Car" required readonly>
 									</div>
 								</div>
 								<div class="form-group row">
-									<label for="oldVehicleCurbWeight" class="col-sm-3 col-form-label">Curb Weight (KG)</label>
+									<label for="confirmVehicleLadenWeight" class="col-sm-3 col-form-label">Laden Weight (KG)</label>
 									<div class="col-sm-9">
-										<input type="number" class="form-control-plaintext" id="oldVehicleCurbWeight" value="800" required readonly>
+										<input type="number" class="form-control-plaintext" id="confirmVehicleLadenWeight" value="950" required readonly>
+									</div>
+								</div>
+								<div class="form-group row">
+									<label for="confirmVehicleUnladenWeight" class="col-sm-3 col-form-label">Unladen Weight (KG)</label>
+									<div class="col-sm-9">
+										<input type="number" class="form-control-plaintext" id="confirmVehicleUnladenWeight" value="900" required readonly>
+									</div>
+								</div>
+								<div class="form-group row">
+									<label for="confirmVehicleKerbWeight" class="col-sm-3 col-form-label">Kerb Weight (KG)</label>
+									<div class="col-sm-9">
+										<input type="number" class="form-control-plaintext" id="confirmVehicleKerbWeight" value="800" required readonly>
 									</div>
 								</div>
 							</div>
@@ -175,10 +187,12 @@
 			
 			<!-- Modal footer -->
 			<div class="modal-footer">
-				<button type="button" class="btn btn-success" id="confirm-submit-form-btn">Confirm</button>
-				<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+				<button type="button" class="btn btn-success" id="confirm-submit-form-btn">
+					<span class="spinner-border spinner-border-sm" id="confirm-submit-form-btn-spinner" style="display:none"></span>
+					<span>Confirm</span></button>
+					<button type="button" class="btn btn-danger" data-dismiss="modal" id="confirm-close-form-btn">Close</button>
+				</div>
+				
 			</div>
-			
 		</div>
 	</div>
-</div>

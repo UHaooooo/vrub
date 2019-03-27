@@ -176,7 +176,19 @@
 					<div class="form-group row">
 						<label for="oldVehicleEngineCapacity" class="col-sm-3 col-form-label">Engine Capacity</label>
 						<div class="col-sm-9">
-							<input type="number" class="form-control-plaintext" id="oldVehicleEngineCapacity" value="2000" required readonly>
+							<input type="number" class="form-control-plaintext" id="oldVehicleEngineCapacity" value="1329" required readonly>
+						</div>
+					</div>
+					<div class="form-group row">
+						<label for="oldVehicleNumberOfSeat" class="col-sm-3 col-form-label">Number of Seat</label>
+						<div class="col-sm-9">
+							<input type="number" class="form-control-plaintext" id="oldVehicleNumberOfSeat" value="5" required readonly>
+						</div>
+					</div>
+					<div class="form-group row">
+						<label for="oldVehicleColor" class="col-sm-3 col-form-label">Color</label>
+						<div class="col-sm-9">
+							<input type="text" class="form-control-plaintext" id="oldVehicleColor" value="Black" required readonly>
 						</div>
 					</div>
 					<div class="form-group row">
@@ -198,7 +210,7 @@
 						</div>
 					</div>
 					<div class="form-group row">
-						<label for="oldVehicleModel" class="col-sm-3 col-form-label">Brand</label>
+						<label for="oldVehicleModel" class="col-sm-3 col-form-label">Model</label>
 						<div class="col-sm-9">
 							<input type="text" class="form-control-plaintext" id="oldVehicleModel" value="Myvi" required readonly>
 						</div>
@@ -212,19 +224,19 @@
 					<div class="form-group row">
 						<label for="oldVehicleLadenWeight" class="col-sm-3 col-form-label">Laden Weight (KG)</label>
 						<div class="col-sm-9">
-							<input type="number" class="form-control-plaintext" id="oldVehicleLadenWeight" value="950" required readonly>
+							<input type="number" class="form-control-plaintext" id="oldVehicleLadenWeight" value="1000" required readonly>
 						</div>
 					</div>
 					<div class="form-group row">
 						<label for="oldVehicleUnladenWeight" class="col-sm-3 col-form-label">Unladen Weight (KG)</label>
 						<div class="col-sm-9">
-							<input type="number" class="form-control-plaintext" id="oldVehicleUnladenWeight" value="900" required readonly>
+							<input type="number" class="form-control-plaintext" id="oldVehicleUnladenWeight" value="960" required readonly>
 						</div>
 					</div>
 					<div class="form-group row">
-						<label for="oldVehicleCurbWeight" class="col-sm-3 col-form-label">Curb Weight (KG)</label>
+						<label for="oldVehicleKerbWeight" class="col-sm-3 col-form-label">Kerb Weight (KG)</label>
 						<div class="col-sm-9">
-							<input type="number" class="form-control-plaintext" id="oldVehicleCurbWeight" value="800" required readonly>
+							<input type="number" class="form-control-plaintext" id="oldVehicleKerbWeight" value="975" required readonly>
 						</div>
 					</div>
 				</form>
@@ -335,6 +347,24 @@
 						</div>
 					</div>
 					<div class="form-group row">
+						<label for="vehicleNumberOfSeat" class="col-sm-3 col-form-label">Number of Seat</label>
+						<div class="col-sm-9">
+							<input type="number" class="form-control" id="vehicleNumberOfSeat" value="" required>
+							<div class="invalid-feedback">
+								Please enter valid number of seat!
+							</div>
+						</div>
+					</div>
+					<div class="form-group row">
+						<label for="vehicleColor" class="col-sm-3 col-form-label">Color</label>
+						<div class="col-sm-9">
+							<input type="text" class="form-control" id="vehicleColor" value="" required>
+							<div class="invalid-feedback">
+								Please enter valid vehicle color!
+							</div>
+						</div>
+					</div>
+					<div class="form-group row">
 						<label for="vehicleFuelType" class="col-sm-3 col-form-label">Fuel Type</label>
 						<div class="col-sm-9">
 							<select id="vehicleFuelType" class="form-control">
@@ -370,7 +400,7 @@
 						</div>
 					</div>
 					<div class="form-group row">
-						<label for="vehicleModel" class="col-sm-3 col-form-label">Brand</label>
+						<label for="vehicleModel" class="col-sm-3 col-form-label">Model</label>
 						<div class="col-sm-9">
 							<input type="text" class="form-control" id="vehicleModel" value="" required>
 							<div class="invalid-feedback">
@@ -406,11 +436,11 @@
 						</div>
 					</div>
 					<div class="form-group row">
-						<label for="vehicleCurbWeight" class="col-sm-3 col-form-label">Curb Weight (KG)</label>
+						<label for="vehicleKerbWeight" class="col-sm-3 col-form-label">Kerb Weight (KG)</label>
 						<div class="col-sm-9">
-							<input type="number" class="form-control" id="vehicleCurbWeight" value="" required>
+							<input type="number" class="form-control" id="vehicleKerbWeight" value="" required>
 							<div class="invalid-feedback">
-								Please enter valid curb weight!
+								Please enter valid kerb weight!
 							</div>
 						</div>
 					</div>
@@ -430,7 +460,7 @@
 			</div>
 		</div>
 	</div>
-
+	
 	@include('inc.confirmation_modal')
 </section>
 @endsection

@@ -22,7 +22,7 @@ class Vehicle extends Model
         'vehicle_type',
         'laden_weight',
         'unladen_weight',
-        'curb_weight',
+        'kerb_weight',
     ];
 
     public function VehicleRegistrationNumber()

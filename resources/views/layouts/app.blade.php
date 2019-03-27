@@ -87,7 +87,7 @@
 					<a href="/editVehicleRegistrationInformation" class="list-group-item list-group-item-action sidenav-option">EDIT VEHICLE REGISTRATION INFORMATION</a>
 					<a href="/transferVehicleOwnership" class="list-group-item list-group-item-action sidenav-option">TRANSFER OF VEHICLE OWNERSHIP</a>
 					<a href="/vehicleLicense" class="list-group-item list-group-item-action sidenav-option">VEHICLE LICENSE</a>
-					<a href="/vehicleInsurance" class="list-group-item list-group-item-action sidenav-option">VEHICLE INSURANCE</a>
+					{{-- <a href="/vehicleInsurance" class="list-group-item list-group-item-action sidenav-option">VEHICLE INSURANCE</a> --}}
 					<a href="/vehicleRegistrationNumber" class="list-group-item list-group-item-action sidenav-option">VEHICLE REGISTRAION NUMBER</a>
 				</div>
 			</nav>

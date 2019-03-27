@@ -51,7 +51,7 @@ $(document).ready(function () {
 								$('.alert').alert('close');
 
 								$('#div-owner-info-1').hide();
-								$('#ownerName').attr('data-id',results[0].id);
+								$('#ownerName').attr('data-id', results[0].id);
 								$('#ownerName').val(results[0].name);
 								$('#ownerCategory').val(getOwnerCategoryText(ownerCategory));
 								$('#ownerIDNumber').val(results[0].identification_number);
@@ -100,6 +100,8 @@ $(document).ready(function () {
 		var vehicleProductionYear = $("#vehicleProductionYear").val();
 		var vehicleOriginalStatus = $("#vehicleOriginalStatus option:selected").val();
 		var vehicleEngineCapacity = $("#vehicleEngineCapacity").val();
+		var vehicleNumberOfSeat = $("#vehicleNumberOfSeat").val();
+		var vehicleColor = $("#vehicleColor").val();
 		var vehicleFuelType = $("#vehicleFuelType option:selected").val();
 		var vehiclePurpose = $("#vehiclePurpose").val();
 		var vehicleBrand = $("#vehicleBrand").val();
@@ -107,20 +109,126 @@ $(document).ready(function () {
 		var vehicleType = $("#vehicleType").val();
 		var vehicleLadenWeight = $("#vehicleLadenWeight").val();
 		var vehicleUnladenWeight = $("#vehicleUnladenWeight").val();
-		var vehicleCurbWeight = $("#vehicleCurbWeight").val();
+		var vehicleKerbWeight = $("#vehicleKerbWeight").val();
 
-		if (removeWhitespaceAndDash(vehicleEngineNo) != '' && removeWhitespaceAndDash(vehicleChassisNo) != '' && removeWhitespaceAndDash(vehiclePurpose) != '' && removeWhitespaceAndDash(vehicleBrand) != '' && removeWhitespaceAndDash(vehicleModel) != '' && removeWhitespaceAndDash(vehicleType) != '') {
-			
+		if (removeWhitespaceAndDash(vehicleEngineNo) != '' && removeWhitespaceAndDash(vehicleChassisNo) != '' && removeWhitespaceAndDash(vehiclePurpose) != '' && removeWhitespaceAndDash(vehicleBrand) != '' && removeWhitespaceAndDash(vehicleModel) != '' && removeWhitespaceAndDash(vehicleType) != '' && removeWhitespaceAndDash(vehicleColor)) {
+
+			$('#confirmVehicleRegistrationNo').val($("#vehicleRegistrationNo option:selected").text());
+			$('#confirmVehicleEngineNo').val(vehicleEngineNo);
+			$('#confirmVehicleChassisNo').val(vehicleChassisNo);
+			$('#confirmVehicleProductionYear').val(vehicleProductionYear);
+			$('#confirmVehicleOriginalStatus').val(getOriginalStatusText(vehicleOriginalStatus));
+			$('#confirmVehicleEngineCapacity').val(vehicleEngineCapacity);
+			$('#confirmVehicleNumberOfSeat').val(vehicleNumberOfSeat);
+			$('#confirmVehicleColor').val(vehicleColor);
+			$('#confirmVehicleFuelType').val(getFuelTypeText(vehicleFuelType));
+			$('#confirmVehiclePurpose').val(vehiclePurpose);
+			$('#confirmVehicleBrand').val(vehicleBrand);
+			$('#confirmVehicleModel').val(vehicleModel);
+			$('#confirmVehicleType').val(vehicleType);
+			$('#confirmVehicleLadenWeight').val(vehicleLadenWeight);
+			$('#confirmVehicleUnladenWeight').val(vehicleUnladenWeight);
+			$('#confirmVehicleKerbWeight').val(vehicleKerbWeight);
+
+			$('#div-confirm-application-type').show();
+			$('#div-confirm-owner-info').show();
+			$('#div-confirm-vehicle-info').show();
+
+			$("#confirmationModal").modal({ backdrop: 'static', keyboard: false });
 		}
+	});
 
-		$('#div-confirm-application-type').show();
-		$('#div-confirm-owner-info').show();
-		$("#confirmationModal").modal({ backdrop: 'static', keyboard: false });
+	// 4. Confirm Submit Form
+	$('#confirm-submit-form-btn').on('click', function () {
+		var ownerID = $('#ownerName').attr('data-id');
+		var vehicleRegistrationNo = $("#vehicleRegistrationNo option:selected").val();
+		var vehicleEngineNo = $("#vehicleEngineNo").val();
+		var vehicleChassisNo = $("#vehicleChassisNo").val();
+		var vehicleProductionYear = $("#vehicleProductionYear").val();
+		var vehicleOriginalStatus = $("#vehicleOriginalStatus option:selected").val();
+		var vehicleEngineCapacity = $("#vehicleEngineCapacity").val();
+		var vehicleNumberOfSeat = $("#vehicleNumberOfSeat").val();
+		var vehicleColor = $("#vehicleColor").val();
+		var vehicleFuelType = $("#vehicleFuelType option:selected").val();
+		var vehiclePurpose = $("#vehiclePurpose").val();
+		var vehicleBrand = $("#vehicleBrand").val();
+		var vehicleModel = $("#vehicleModel").val();
+		var vehicleType = $("#vehicleType").val();
+		var vehicleLadenWeight = $("#vehicleLadenWeight").val();
+		var vehicleUnladenWeight = $("#vehicleUnladenWeight").val();
+		var vehicleKerbWeight = $("#vehicleKerbWeight").val();
+
+		$.ajax({
+			url: apiURL + "vehicles",
+			type: 'POST',
+			contentType: 'application/json',
+			data: JSON.stringify({
+				registration_number_id: vehicleRegistrationNo,
+				engine_number: vehicleEngineNo,
+				chassis_number: vehicleChassisNo,
+				production_year: vehicleProductionYear,
+				original_status: vehicleOriginalStatus,
+				engine_capacity: vehicleEngineCapacity,
+				number_of_seat: vehicleNumberOfSeat,
+				color: vehicleColor,
+				fuel_type: vehicleFuelType,
+				purpose: vehiclePurpose,
+				brand: vehicleBrand,
+				model: vehicleModel,
+				vehicle_type: vehicleType,
+				laden_weight: vehicleLadenWeight,
+				unladen_weight: vehicleUnladenWeight,
+				kerb_weight: vehicleKerbWeight
+			}),
+			beforeSend: function () {
+				$('#confirm-submit-form-btn-spinner').show();
+				$('#confirm-submit-form-btn').attr('disabled', 'disabled');
+				$('#confirm-close-form-btn').attr('disabled', 'disabled');
+			},
+			success: function (results) {
+				console.log(results);
+
+				register(results.id.toString(), ownerID, function (err, contract_results) {
+					console.log(err, contract_results);
+
+					if (err != null) {
+						deleteFailedRegistration(results.id, vehicleRegistrationNo);
+
+						$('#confirm-submit-form-btn-spinner').hide();
+						$('#confirm-submit-form-btn').removeAttr('disabled');
+						$('#confirm-close-form-btn').removeAttr('disabled');
+						$('#confirmationModal').modal('hide');
+
+						displayAlert("Error registering. Please reset form and try again later.", "danger");
+						scrollToTop();
+
+					} else {
+						window.open('https://ropsten.etherscan.io/tx/' + contract_results);
+					}
+				});
+			},
+			error: function (error) {
+				console.log(error);
+
+				$('#confirm-submit-form-btn-spinner').hide();
+				$('#confirm-submit-form-btn').removeAttr('disabled');
+				$('#confirm-close-form-btn').removeAttr('disabled');
+				$('#confirmationModal').modal('hide');
+
+				displayAlert("Error registering. Please reset form and try again later.", "danger");
+				scrollToTop();
+			}
+		});
 	});
 
 	// Choose Vehicle Registration Area
 	$("#registrationAreaOption").on('change', function () {
 		getLatestRunningNumberByArea(this.value, $('#vehicleRegistrationNo'));
+	});
+
+	// Reset Form
+	$('#reset-form-btn').on('click', function () {
+		window.location.reload();
 	});
 });
 
@@ -175,6 +283,23 @@ function getLatestRunningNumberByArea(area_id, selection_to_setup) {
 
 			displayAlert("Error getting running number. Please try again later.", "danger");
 			scrollToTop();
+		}
+	});
+}
+
+function deleteFailedRegistration(id, registration_number_id) {
+	$.ajax({
+		url: apiURL + "vehicles/" + id,
+		type: 'DELETE',
+		contentType: 'application/json',
+		data: JSON.stringify({
+			registration_number_id: registration_number_id,
+		}),
+		success: function (results) {
+			console.log(results);
+		},
+		error: function (error) {
+			console.log(error);
 		}
 	});
 }

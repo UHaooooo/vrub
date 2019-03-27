@@ -37,9 +37,7 @@ function check() {
 	})();
 }
 
-async function register() {
-	var vehicleIDInput = $("#registerVehicleID").val();
-	var ownerIDInput = $("#registerOwnerID").val();
+async function register(vehicleIDInput,ownerIDInput, callbackFunction) {
 
 	var vehicleID = web3.fromAscii(vehicleIDInput);
 	var ownerID = web3.fromAscii(ownerIDInput);
@@ -48,9 +46,7 @@ async function register() {
 
 	await ethereum.enable();
 
-	contractInstance.register(vehicleID, ownerID, { gasPrice: web3.toWei(getGasPrice(), 'gwei') }, function (err, results) {
-		console.log(err, results);
-	});
+	contractInstance.register(vehicleID, ownerID, { gasPrice: web3.toWei(getGasPrice(), 'gwei') }, callbackFunction);
 }
 
 function getNumOfRecords() {

@@ -30,7 +30,7 @@ class CreateVehiclesTable extends Migration
 			$table->string('vehicle_type', 100);
 			$table->double('laden_weight');
 			$table->double('unladen_weight');
-			$table->double('curb_weight');
+			$table->double('kerb_weight');
 			$table->timestamps();
 
 			$table->foreign('registration_number_id')->references('id')->on('vehicle_registration_numbers');
