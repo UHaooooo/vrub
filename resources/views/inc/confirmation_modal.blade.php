@@ -78,13 +78,118 @@
 						</div>
 					</div>
 				</div>
+				<div class="row" id="div-confirm-old-vehicle-info" style="display:none">
+					<div class="col-sm-12">
+						<div class="card"  >
+							<div class="card-header">Old Vehicle Information</div>
+							<div class="card-body" style="display:block">
+								<div class="form-group row">
+									<label for="confirmOldVehicleRegistrationNo" class="col-sm-3 col-form-label">New Vehicle Registration No. for Old Vehicle</label>
+									<div class="col-sm-9">
+										<input type="text" class="form-control-plaintext" id="confirmOldVehicleRegistrationNo" value="" required readonly>
+									</div>
+								</div>
+								<div class="form-group row">
+									<label for="confirmOldVehicleEngineNo" class="col-sm-3 col-form-label">Engine No.</label>
+									<div class="col-sm-9">
+										<input type="text" class="form-control-plaintext" id="confirmOldVehicleEngineNo" value="" required readonly>
+									</div>
+								</div>
+								<div class="form-group row">
+									<label for="confirmOldVehicleChassisNo" class="col-sm-3 col-form-label">Chassis No.</label>
+									<div class="col-sm-9">
+										<input type="text" class="form-control-plaintext" id="confirmOldVehicleChassisNo" value="" required readonly>
+									</div>
+								</div>
+								<div class="form-group row">
+									<label for="confirmOldVehicleProductionYear" class="col-sm-3 col-form-label">Production Year</label>
+									<div class="col-sm-9">
+										<input type="number" class="form-control-plaintext" id="confirmOldVehicleProductionYear" value="2008" required readonly>
+									</div>
+								</div>
+								<div class="form-group row">
+									<label for="confirmOldVehicleOriginalStatus" class="col-sm-3 col-form-label">Original Status</label>
+									<div class="col-sm-9">
+										<input type="text" id="confirmOldVehicleOriginalStatus" class="form-control-plaintext" value="A - Newly Import Vehicle" required readonly>
+									</div>
+								</div>
+								<div class="form-group row">
+									<label for="confirmOldVehicleEngineCapacity" class="col-sm-3 col-form-label">Engine Capacity</label>
+									<div class="col-sm-9">
+										<input type="number" class="form-control-plaintext" id="confirmOldVehicleEngineCapacity" value="2000" required readonly>
+									</div>
+								</div>
+								<div class="form-group row">
+									<label for="confirmOldVehicleNumberOfSeat" class="col-sm-3 col-form-label">Number of Seat</label>
+									<div class="col-sm-9">
+										<input type="number" class="form-control-plaintext" id="confirmOldVehicleNumberOfSeat" value="" required readonly>
+									</div>
+								</div>
+								<div class="form-group row">
+									<label for="confirmOldVehicleColor" class="col-sm-3 col-form-label">Color</label>
+									<div class="col-sm-9">
+										<input type="text" class="form-control-plaintext" id="confirmOldVehicleColor" value="" required readonly>
+									</div>
+								</div>
+								<div class="form-group row">
+									<label for="confirmOldVehicleFuelType" class="col-sm-3 col-form-label">Fuel Type</label>
+									<div class="col-sm-9">
+										<input type="text" class="form-control-plaintext" id="confirmOldVehicleFuelType" value="0 - Petrol" required readonly>
+									</div>
+								</div>
+								<div class="form-group row">
+									<label for="confirmOldVehiclePurpose" class="col-sm-3 col-form-label">Purpose</label>
+									<div class="col-sm-9">
+										<input type="text" class="form-control-plaintext" id="confirmOldVehiclePurpose" value="Persendirian" required readonly>
+									</div>
+								</div>
+								<div class="form-group row">
+									<label for="confirmOldVehicleBrand" class="col-sm-3 col-form-label">Brand</label>
+									<div class="col-sm-9">
+										<input type="text" class="form-control-plaintext" id="confirmOldVehicleBrand" value="Perodua" required readonly>
+									</div>
+								</div>
+								<div class="form-group row">
+									<label for="confirmOldVehicleModel" class="col-sm-3 col-form-label">Brand</label>
+									<div class="col-sm-9">
+										<input type="text" class="form-control-plaintext" id="confirmOldVehicleModel" value="Myvi" required readonly>
+									</div>
+								</div>
+								<div class="form-group row">
+									<label for="confirmOldVehicleType" class="col-sm-3 col-form-label">Vehicle Type</label>
+									<div class="col-sm-9">
+										<input type="text" class="form-control-plaintext" id="confirmOldVehicleType" value="Car" required readonly>
+									</div>
+								</div>
+								<div class="form-group row">
+									<label for="confirmOldVehicleLadenWeight" class="col-sm-3 col-form-label">Laden Weight (KG)</label>
+									<div class="col-sm-9">
+										<input type="number" class="form-control-plaintext" id="confirmOldVehicleLadenWeight" value="950" required readonly>
+									</div>
+								</div>
+								<div class="form-group row">
+									<label for="confirmOldVehicleUnladenWeight" class="col-sm-3 col-form-label">Unladen Weight (KG)</label>
+									<div class="col-sm-9">
+										<input type="number" class="form-control-plaintext" id="confirmOldVehicleUnladenWeight" value="900" required readonly>
+									</div>
+								</div>
+								<div class="form-group row">
+									<label for="confirmOldVehicleKerbWeight" class="col-sm-3 col-form-label">Kerb Weight (KG)</label>
+									<div class="col-sm-9">
+										<input type="number" class="form-control-plaintext" id="confirmOldVehicleKerbWeight" value="800" required readonly>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 				<div class="row" id="div-confirm-vehicle-info" style="display:none">
 					<div class="col-sm-12">
 						<div class="card"  >
 							<div class="card-header">Vehicle Information</div>
 							<div class="card-body" style="display:block">
 								<div class="form-group row">
-									<label for="confirmVehicleRegistrationNo" class="col-sm-3 col-form-label">New Vehicle Registration No. for Old Vehicle</label>
+									<label for="confirmVehicleRegistrationNo" class="col-sm-3 col-form-label">Vehicle Registration No.</label>
 									<div class="col-sm-9">
 										<input type="text" class="form-control-plaintext" id="confirmVehicleRegistrationNo" value="" required readonly>
 									</div>

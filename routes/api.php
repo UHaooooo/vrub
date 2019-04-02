@@ -23,3 +23,7 @@ Route::apiResource('citizens', 'CitizenController');
 Route::get('areas/latest_number', 'AreaController@latestNumber');
 
 Route::apiResource('vehicles', 'VehicleController');
+
+Route::post('changeVehicleRegistrationNumber/{vehicles}', 'VehicleController@changeVehicleRegistrationNumber');
+
+Route::post('revertChangeVehicleRegistrationNumber/{vehicles}', 'VehicleController@revertChangeVehicleRegistrationNumber');

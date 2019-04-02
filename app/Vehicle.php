@@ -25,7 +25,7 @@ class Vehicle extends Model
         'kerb_weight',
     ];
 
-    public function VehicleRegistrationNumber()
+    public function vehicleRegistrationNumber()
     {
         return $this->hasOne('App\VehicleRegistrationNumber', 'id', 'registration_number_id');
     }

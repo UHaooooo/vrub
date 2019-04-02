@@ -142,10 +142,48 @@
 				</div>
 				<form class="card-body was-validated" style="display:none" id="div-old-vehicle-info-2" novalidate>
 					<div class="form-group row">
+						<label for="oldRegistrationAreaOption" class="col-sm-3 col-form-label">Vehicle Registration Area</label>
+						<div class="col-sm-9">
+							<select id="oldRegistrationAreaOption" class="form-control">
+								<option value="1">Johor</option>
+								<option value="2">Kedah</option>
+								<option value="3">Langkawi</option>
+								<option value="4">Kelantan</option>
+								<option value="5">Malacca</option>
+								<option value="6">Negeri Sembilan</option>
+								<option value="7">Pahang</option>
+								<option value="8">Penang</option>
+								<option value="9">Perak</option>
+								<option value="10">Perlis</option>
+								<option value="11">Selangor</option>
+								<option value="12">Terengganu</option>
+								<option value="13">West Coast</option>
+								<option value="14">Sandakan</option>
+								<option value="15">Kudat</option>
+								<option value="16">Tawau</option>
+								<option value="17">Beaufort</option>
+								<option value="18">Keningau</option>
+								<option value="19">Lahad Datu</option>
+								<option value="20">Kuching</option>
+								<option value="21">Sibu</option>
+								<option value="22">Miri</option>
+								<option value="23">Sarikei</option>
+								<option value="24">Bintulu</option>
+								<option value="25">Limbang</option>
+								<option value="26">Kota Samarahan</option>
+								<option value="27">Kapit</option>
+								<option value="28">Betong</option>
+								<option value="29">Kuala Lumpur</option>
+								<option value="30">Labuan</option>
+								<option value="31">Putrajaya</option>
+								<option value="lala">lalalalal</option>
+							</select>
+						</div>
+					</div>
+					<div class="form-group row">
 						<label for="oldVehicleRegistrationNo" class="col-sm-3 col-form-label">New Vehicle Registration No. for Old Vehicle</label>
 						<div class="col-sm-9">
 							<select id="oldVehicleRegistrationNo" class="form-control">
-								<option value="CBX8898">CBX8898</option>
 							</select>
 						</div>
 					</div>
@@ -250,7 +288,7 @@
 			<div class="card"  >
 				<div class="card-header">Vehicle Information</div>
 				<form class="card-body was-validated" novalidate>
-					<div class="form-group row">
+					<div class="form-group row" id="div-registration-area-option">
 						<label for="registrationAreaOption" class="col-sm-3 col-form-label">Vehicle Registration Area</label>
 						<div class="col-sm-9">
 							<select id="registrationAreaOption" class="form-control">
