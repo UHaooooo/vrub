@@ -172,11 +172,10 @@
 								<option value="25">Limbang</option>
 								<option value="26">Kota Samarahan</option>
 								<option value="27">Kapit</option>
-								<option value="28">Betong</option>
+								<option value="28">Sri Aman</option>
 								<option value="29">Kuala Lumpur</option>
 								<option value="30">Labuan</option>
 								<option value="31">Putrajaya</option>
-								<option value="lala">lalalalal</option>
 							</select>
 						</div>
 					</div>
@@ -319,11 +318,10 @@
 								<option value="25">Limbang</option>
 								<option value="26">Kota Samarahan</option>
 								<option value="27">Kapit</option>
-								<option value="28">Betong</option>
+								<option value="28">Sri Aman</option>
 								<option value="29">Kuala Lumpur</option>
 								<option value="30">Labuan</option>
 								<option value="31">Putrajaya</option>
-								<option value="lala">lalalalal</option>
 							</select>
 						</div>
 					</div>

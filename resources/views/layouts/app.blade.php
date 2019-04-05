@@ -84,7 +84,7 @@
 			<nav class="sidenav">
 				<div class="list-group">
 					<a href="/newVehicleRegistration" class="list-group-item list-group-item-action sidenav-option">NEW VEHICLE REGISTRATION</a>
-					<a href="/editVehicleRegistrationInformation" class="list-group-item list-group-item-action sidenav-option">EDIT VEHICLE REGISTRATION INFORMATION</a>
+					{{-- <a href="/editVehicleRegistrationInformation" class="list-group-item list-group-item-action sidenav-option">EDIT VEHICLE REGISTRATION INFORMATION</a> --}}
 					<a href="/transferVehicleOwnership" class="list-group-item list-group-item-action sidenav-option">TRANSFER OF VEHICLE OWNERSHIP</a>
 					<a href="/vehicleLicense" class="list-group-item list-group-item-action sidenav-option">VEHICLE LICENSE</a>
 					{{-- <a href="/vehicleInsurance" class="list-group-item list-group-item-action sidenav-option">VEHICLE INSURANCE</a> --}}

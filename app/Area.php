@@ -21,4 +21,9 @@ class Area extends Model
     {
         return $this->hasOne('App\VehicleRegistrationNumber')->where('status', 'FREE')->orderBy('id', 'asc');
     }
+
+    public function tenderSessions()
+    {
+        return $this->hasMany('App\TenderSession');
+    }
 }

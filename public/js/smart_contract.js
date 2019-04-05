@@ -17,7 +17,7 @@ window.addEventListener('load', async () => {
 
 		contractABI = [{ "constant": false, "inputs": [{ "name": "_vehicleID", "type": "bytes32" }], "name": "deleteRecord", "outputs": [], "payable": false, "stateMutability": "nonpayable", "type": "function" }, { "constant": false, "inputs": [], "name": "kill", "outputs": [], "payable": false, "stateMutability": "nonpayable", "type": "function" }, { "constant": false, "inputs": [{ "name": "_vehicleID", "type": "bytes32" }, { "name": "_ownerID", "type": "bytes32" }], "name": "register", "outputs": [], "payable": false, "stateMutability": "nonpayable", "type": "function" }, { "constant": false, "inputs": [{ "name": "_vehicleID", "type": "bytes32" }, { "name": "_oldOwnerID", "type": "bytes32" }, { "name": "_newOwnerID", "type": "bytes32" }], "name": "transferOwner", "outputs": [], "payable": false, "stateMutability": "nonpayable", "type": "function" }, { "inputs": [], "payable": false, "stateMutability": "nonpayable", "type": "constructor" }, { "payable": true, "stateMutability": "payable", "type": "fallback" }, { "constant": true, "inputs": [{ "name": "_vehicleID", "type": "bytes32" }], "name": "checkIsVehicleExists", "outputs": [{ "name": "isExists", "type": "bool" }], "payable": false, "stateMutability": "view", "type": "function" }, { "constant": true, "inputs": [], "name": "getNumOfRecords", "outputs": [{ "name": "_numOfRecords", "type": "uint256" }], "payable": false, "stateMutability": "view", "type": "function" }, { "constant": true, "inputs": [{ "name": "_vehicleID", "type": "bytes32" }], "name": "getOwnerID", "outputs": [{ "name": "_ownerID", "type": "bytes32" }], "payable": false, "stateMutability": "view", "type": "function" }, { "constant": true, "inputs": [], "name": "numOfRecords", "outputs": [{ "name": "", "type": "uint256" }], "payable": false, "stateMutability": "view", "type": "function" }];
 
-		contractAddress = '0x94013c0eeF2241Bd4Fc85c6F484141E66B9e8e28';
+		contractAddress = '0xCE425f2b4F92922646e54F1eD54DBC55c4053B0a';
 
 		contractInstance = web3.eth.contract(contractABI).at(contractAddress);
 
@@ -57,18 +57,16 @@ function getNumOfRecords() {
 
 function getOwnerID(vehicleIDInput, callbackFunction) {
 	var vehicleID = web3.fromAscii(vehicleIDInput);
-	
+
 	contractInstance.getOwnerID(vehicleID, callbackFunction);
 }
 
-function transferOwner() {
-	var transferVehicleID = web3.fromAscii($("#transferVehicleID").val());
-	var transferOldOwnerID = web3.fromAscii($("#transferOldOwnerID").val());
-	var transferNewOwnerID = web3.fromAscii($("#transferNewOwnerID").val());
+function transferOwner(transferVehicleIDInput, transferOldOwnerIDInput, transferNewOwnerIDInput, callbackFunction) {
+	var transferVehicleID = web3.fromAscii(transferVehicleIDInput);
+	var transferOldOwnerID = web3.fromAscii(transferOldOwnerIDInput);
+	var transferNewOwnerID = web3.fromAscii(transferNewOwnerIDInput);
 
-	contractInstance.transferOwner(transferVehicleID, transferOldOwnerID, transferNewOwnerID, function (err, results) {
-		console.log(err, results);
-	});
+	contractInstance.transferOwner(transferVehicleID, transferOldOwnerID, transferNewOwnerID, callbackFunction);
 }
 
 function deleteRecord() {

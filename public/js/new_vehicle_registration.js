@@ -437,33 +437,35 @@ function setupVehicleSection() {
 			break;
 		case '01':
 			$('#div-old-vehicle-info').show();
-			break
+			break;
 		case '02':
 			$('#div-vehicle-info').show();
-			break
+
+			$('#div-registration-area-option').hide();
+			getOwnerTenderNumber();
+
+			break;
 		case '03':
 			$('#div-old-vehicle-info').show();
-			break
+			break;
 	}
 }
 
 // Get Latest Running Number for given area and setup the select option
 function getLatestRunningNumberByArea(area_id, selection_to_setup) {
 	$.ajax({
-		url: apiURL + "areas/latest_number?area_id=" + area_id,
+		url: apiURL + "vehicleRegistrationNumbers/latest_number?area_id=" + area_id,
 		type: 'GET',
 		contentType: 'application/json',
 		beforeSend: function () {
 			selection_to_setup.attr('disabled', 'disabled');
 		},
 		success: function (results) {
-			if (results.data.length < 1) {
+			if (results.length < 1) {
 				displayAlert("Error getting running number. Please try again later.", "danger");
 				scrollToTop();
 			} else {
-				var latestNumber = results.data[0].latestVehicleRegistrationNumber;
-
-				selection_to_setup.html($('<option>', { 'value': latestNumber.id }).text(latestNumber.registration_number));
+				selection_to_setup.html($('<option>', { 'value': results[0].id }).text(results[0].registration_number));
 
 				selection_to_setup.removeAttr('disabled');
 			}
@@ -475,6 +477,10 @@ function getLatestRunningNumberByArea(area_id, selection_to_setup) {
 			scrollToTop();
 		}
 	});
+}
+
+function getOwnerTenderNumber() {
+	
 }
 
 function deleteFailedRegistration(id, registration_number_id) {

@@ -45,7 +45,7 @@ class InitNumbers extends Command
         for ($i = 1; $i < 10000; $i++) {
             $number = new VehicleRegistrationNumber;
             $number->registration_number = $prefix . $i . $suffix;
-            $number->status = "FREE";
+            $number->status = "TENDER";
             $number->area_id = $area_id;
             $number->save();
 		}
